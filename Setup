@@ -1,0 +1,15 @@
+# Basic i3 config with blur and polybar
+i3-gaps
+compton-tryone-git
+polybar
+
+# Rofi and font for them
+
+rofi
+ttf-yosemite-san-francisco-font-git
+
+# Remove kde wallet 
+sudo pacman -Rdd kwallet
+
+# Optional
+neofetch
