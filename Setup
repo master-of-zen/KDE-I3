@@ -4,9 +4,11 @@ compton-tryone-git
 polybar
 
 # Rofi and font for them
-
 rofi
 ttf-yosemite-san-francisco-font-git
+
+# Notifications
+dunst
 
 # Remove kde wallet 
 sudo pacman -Rdd kwallet
