@@ -4,9 +4,10 @@ Files for KDE + I3-gaps configuration, including Rofi and Compton-Tryone
 ## KDE preparation
 1. Installing full KDE desktop. This is starting point.
 2. In KDE settings center:
-    1.Disabling 'Splash screen' (other way you will have splash that drawing over entire desktop)
-    2.Disabling compositor startup on login
-    3.Download wm.sh script and put him in ~./config , add script [wm.sh] in Autostart, set 'Run On' to 'Before session startup' (don`t forget tomake wm.sh executable)
+    - Disabling 'Splash screen' (other way you will have splash that drawing over entire desktop).
+    - Disabling compositor startup on login.
+    - Download wm.sh script and put him in ~./config , add script [wm.sh] in Autostart, set 'Run On' to
+'Before session startup' (don`t forget tomake wm.sh executable).
 3. Move 'i3' folder into ~/.config
 
 ## Instaling necessary packages
