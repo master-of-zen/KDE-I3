@@ -1,6 +1,5 @@
 # KDE + I3
-Files for KDE + I3-gaps configuration, including Rofi and Compton-Tryone
-
+Guide and files for  KDE + I3-gaps configuration
 ## KDE preparation
 1. Installing full KDE desktop. This is starting point.
 2. In KDE settings center:
