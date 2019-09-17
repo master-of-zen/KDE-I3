@@ -1,8 +1,8 @@
-
 # Kill Plasma
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
+# Set 
 set $mod Mod4
 
 # Don’t treat Plasma pop-ups as full-sized windows
@@ -22,12 +22,15 @@ new_float normal
 
 # Hide borders
 hide_edge_borders none
+
 # Change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-font xft: System San Francisco Display Regular 9
+# Uncomment if installed optional font
+#font xft: System San Francisco Display Regular 9
+xft:DejaVu Sans Mono 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -35,17 +38,22 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+q kill
 
-# start program launcher
-bindsym $mod+d exec rofi -show run -lines 5  -font "System San Francisco Display 18"
+# start program launcher, uncomment if you have rofi installed, change font to which you want
+#bindsym $mod+d exec rofi -show run -lines 5  -font "System San Francisco Display 18"
 
-# lang change
-exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
+# lang change, uncomment and change for your need
+#exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 
-# Start Applications
+##  Start Applications
 bindsym $mod+Return exec konsole
+
+# Killing compton, kill and restart if you have black terminals and no transparency
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+
+# KDE tool for making screenshots
 bindsym Print exec --no-startup-id spectacle
 
 # change focuss and cursor keys:
@@ -138,9 +146,6 @@ for_window [class="Xfburn"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
@@ -159,7 +164,9 @@ mode "resize" {
 # Autostart applications
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id compton -b
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+#uncomment if installed polybar
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 set_from_resource $term_background background
 set_from_resource $term_foreground foreground
@@ -188,7 +195,6 @@ set_from_resource $term_color15    color15
   client.unfocused        #56737a #1e1e20 #56737a #2c5159 #2c5159
   client.urgent           #56737a #1e1e20 #56737a #2c5159 #2c5159
   client.placeholder      #56737a #1e1e20 #56737a #2c5159 #2c5159
-
   client.background       #2B2C2B
 
 

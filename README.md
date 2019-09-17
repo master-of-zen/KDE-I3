@@ -1,4 +1,4 @@
-# .dot
+# KDE + I3
 Files for KDE + I3-gaps configuration, including Rofi and Compton-Tryone
 
 ## KDE preparation
@@ -19,7 +19,8 @@ Files for KDE + I3-gaps configuration, including Rofi and Compton-Tryone
 
 At this point computer can be rebooted into i3, dont forget to have default login session 'Plasma' 
 
-## Optional installs
+## Optional
 1. 'polybar' (Customizable bar)
 2. 'rofi' (application startup application)
 3. 'ttf-yosemite-san-francisco-font-git'(Good font)
+4. Go over i3/config file and uncomment\change what you need (polybar/rofi/font)
